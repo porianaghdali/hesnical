@@ -16,7 +16,7 @@ const SidebarNavGroupToggle = (props) => {
   // https://react-bootstrap.github.io/components/accordion/#custom-toggle-with-expansion-awareness
   const { activeEventKey } = useContext(AccordionContext)
 
-  
+
   const {
     eventKey, icon, children, setIsShow,
   } = props
@@ -24,7 +24,8 @@ const SidebarNavGroupToggle = (props) => {
   const decoratedOnClick = useAccordionButton(eventKey)
 
   const isCurrentEventKey = activeEventKey === eventKey
-
+ 
+ 
   useEffect(() => {
     setIsShow(activeEventKey === eventKey)
   }, [activeEventKey, eventKey, setIsShow])
